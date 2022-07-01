@@ -72,13 +72,14 @@ closeFormButton.addEventListener("click", function() {
 })
 
 
-
-function Book(title, author, length, readStatus, arrayPosition) {
-    this.title = title;
-    this.author = author;
-    this.length = length;
-    this.readStatus = readStatus;
-    this.arrayPosition = arrayPosition
+class Book {
+    constructor(title, author, length, readStatus, arrayPosition) {
+        this.title = title;
+        this.author = author;
+        this.length = length;
+        this.readStatus = readStatus;
+        this.arrayPosition = arrayPosition
+    }
 }
 
 function addBookToLibrary(book) {
@@ -131,7 +132,6 @@ function addBookToLibrary(book) {
     newBookDiv.appendChild(bookDelete);    
     bookContainer.appendChild(newBookDiv);
 }
-
 
 
 
